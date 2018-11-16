@@ -6,6 +6,8 @@ body {
 
 #content {
     display: grid;
+    max-width: 960px;
+    margin: 0 auto;
     
     /* PERCENT BASED LAYOUT */
     /* grid-template-columns: 33.3% 33.3% 33.3%; */
@@ -21,15 +23,12 @@ body {
     
     /* We can use grid-template-ROWS (with repeat) just like columns */
     /* grid-template-rows: 200px 300px 400px 200px; */
-    grid-template-rows: repeat(2, minmax(150px, auto));
+    grid-auto-rows: minmax(150px, auto);
 
     /* MARGIN IN BETWEEN GRID CHILDREN */
     /* grid-column-gap: 10px;
     grid-row-gap: 10px; */
     grid-gap: 10px;
-    
-    max-width: 960px;
-    margin: 0 auto;
 }
 
 #content div {
@@ -39,18 +38,4 @@ body {
 
 #content div:nth-child(even) {
     background: #777;
-}
-
-.nested {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    /* you can use span to specify how far the element should span */
-    grid-column: span 3;
-}
-
-.nested p {
-    border: 1px solid #fff;
-    padding: 20px;
-    margin: 0;
 }
