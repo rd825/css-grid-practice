@@ -1,0 +1,42 @@
+body {
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+#content {
+    display: grid;
+    
+    /* PERCENT BASED LAYOUT */
+    /* grid-template-columns: 33.3% 33.3% 33.3%; */
+    
+    /* FRACTIONAL LAYOUT */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    
+    /* USING REPEAT FOR LAYOUT */
+    grid-template-columns: repeat(6, 1fr); 
+
+    /* We can use MINMAX with auto-rows to set the min and max height for rows */
+    /* grid-auto-rows: minmax(200px, auto); */
+    
+    /* We can use grid-template-ROWS (with repeat) just like columns */
+    /* grid-template-rows: 200px 300px 400px 200px; */
+    grid-template-rows: repeat(4, minmax(150px, auto));
+
+    /* MARGIN IN BETWEEN GRID CHILDREN */
+    /* grid-column-gap: 10px;
+    grid-row-gap: 10px; */
+    grid-gap: 10px;
+    
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#content div {
+    background: #3bbced;
+    padding: 30px;
+}
+
+#content div:nth-child(even) {
+    background: #777;
+}
